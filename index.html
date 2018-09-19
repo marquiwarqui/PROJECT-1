@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <!-- <link rel="stylesheet" href="assets/css/app.css"> -->
+    <link rel="stylesheet" href="assets/css/map.css">
   </head>
   <body>
       
@@ -69,6 +70,7 @@
         <p>This is a close button example.</p>
       </div>
       
+      <div id="map"></div>
 
       
 
@@ -76,5 +78,20 @@
     <script src="assets/js/vendor/what-input.js"></script>
     <script src="assets/js/vendor/foundation.js"></script>
     <script src="assets/js/app.js"></script>
+    <!-- <script src="project.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap" -->
+    <!-- async defer></script> -->
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap"
+    async defer></script>
+
   </body>
 </html>
