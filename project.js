@@ -7,3 +7,4 @@ function initMap() {
     zoom: 8
   });
 }
+
