@@ -1,80 +1,93 @@
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
-  <head>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-  </head>
-  <body>
-      
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Musical Maps</li>
-          <li class="has-submenu">
-          
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li><input type="search" placeholder="Search"></li>
-          <li><button type="button" class="button">Search</button></li>
-        </ul>
-      </div>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation for Sites</title>
+  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  
+  <script src="assets/js/API/api-spotify.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Musical Maps</li>
+        <li class="has-submenu">
+
+      </ul>
     </div>
-
-
-      <ul class="accordion" data-accordion>
-        <li class="accordion-item is-active" data-accordion-item>
-          <a href="#" class="accordion-title">Accordion 1</a>
-          <div class="accordion-content" data-tab-content >
-            <p>Panel 1. Lorem ipsum dolor</p>
-            <a href="#">Nowhere to Go</a>
-          </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li>
+          <input id="search" type="search" placeholder="Search">
         </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Accordion 2</a>
-          <div class="accordion-content" data-tab-content>
-            <textarea></textarea>
-            <button class="button">I do nothing!</button>
-          </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Accordion 3</a>
-          <div class="accordion-content" data-tab-content>
-            Type your name!
-            <input type="text"></input>
-          </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-          <a href="#" class="accordion-title">Accordion 4</a>
-          <div class="accordion-content" data-tab-content>
-            Type your name!
-            <input type="text"></input>
-          </div>
+        <li>
+          <button type="button" class="button">Search</button>
         </li>
       </ul>
+    </div>
+  </div>
 
-      <div class="callout" data-closable>
-        <button class="close-button" aria-label="Close alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p>This is a close button example.</p>
+
+  <ul class="accordion" data-accordion>
+    <li class="accordion-item is-active" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 1</a>
+      <div class="accordion-content" data-tab-content>
+        <p>Panel 1. Lorem ipsum dolor</p>
+        <a href="#">Nowhere to Go</a>
       </div>
-      
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 2</a>
+      <div class="accordion-content" data-tab-content>
+        <textarea></textarea>
+        <button class="button">I do nothing!</button>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 3</a>
+      <div class="accordion-content" data-tab-content>
+        Type your name!
+        <input type="text"></input>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 4</a>
+      <div class="accordion-content" data-tab-content>
+        Type your name!
+        <input type="text"></input>
+      </div>
+    </li>
+  </ul>
 
-      
+  <div class="callout" data-closable>
+    <button class="close-button" aria-label="Close alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p>This is a close button example.</p>
+  </div>
 
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/vendor/what-input.js"></script>
-    <script src="assets/js/vendor/foundation.js"></script>
-    <script src="assets/js/app.js"></script>
-  </body>
+<div id="youtube-player"></div>
+<!--   <iframe id="ytplayer" type="text/html" width="640" height="360" 
+  src="https://www.youtube.com/embed?listType=search&list=pakistan+music+modern"
+    frameborder="0"></iframe> -->
+  <!-- <div id="ytplayer"></div> -->
+  <pre id="response"></pre>
+
+
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/what-input.js"></script>
+  <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/API/api-base.js"></script>
+</body>
+
 </html>
