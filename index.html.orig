@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation for Sites</title>
+  <link rel="stylesheet" href="assets/css/foundation.css">
+<<<<<<< HEAD
+  <!-- <link rel="stylesheet" href="assets/css/app.css"> -->
+  
+  <script src="assets/js/API/api-youtube.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Musical Maps</li>
+        <li class="has-submenu">
+
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li>
+          <input id="search" type="search" placeholder="Search">
+        </li>
+        <li>
+          <button type="button" class="button">Search</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <ul class="accordion" data-accordion>
+    <li class="accordion-item is-active" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 1</a>
+      <div class="accordion-content" data-tab-content>
+        <p>Panel 1. Lorem ipsum dolor</p>
+        <a href="#">Nowhere to Go</a>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 2</a>
+      <div class="accordion-content" data-tab-content>
+        <textarea></textarea>
+        <button class="button">I do nothing!</button>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 3</a>
+      <div class="accordion-content" data-tab-content>
+        Type your name!
+        <input type="text"></input>
+      </div>
+    </li>
+    <li class="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 4</a>
+      <div class="accordion-content" data-tab-content>
+        Type your name!
+        <input type="text"></input>
+=======
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Musical Maps</li>
+        <li class="has-submenu">
+
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><input type="search" placeholder="Search"></li>
+        <li><button type="button" class="button">Search</button></li>
+        <li><button type="button" a class="button alert">Clear Search</button></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <!-- body -->
+
+
+
+
+  <ul data-accordion>
+    <li id="accordion-item" data-accordion-item>
+      <a href="#" class="accordion-title">Accordion 1</a>
+      <div class="accordion-content" data-tab-content>
+        <div>
+          <iframe width="154.8" height="94.5" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+        </div>
+>>>>>>> 9aff3e4c7a0da3d65207d41827fcd76d33e0c058
+      </div>
+    </li>
+  </ul>
+
+<<<<<<< HEAD
+  <div class="callout" data-closable>
+    <button class="close-button" aria-label="Close alert" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p>This is a close button example.</p>
+  </div>
+
+<div id="youtube-player"></div>
+
+
+
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <script src="./assets/js/app.js"></script>
+=======
+
+  <label class = "recent">
+    <select multiple>
+      <option value="showboat">Showboat</option>
+      <option value="redwing">Redwing</option>
+      <option value="narcho">Narcho</option>
+      <option value="hardball">Hardball</option>
+    </select>
+  </label>
+
+
+
+
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/what-input.js"></script>
+  <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/app.js"></script>
+>>>>>>> 9aff3e4c7a0da3d65207d41827fcd76d33e0c058
+</body>
+
+</html>
