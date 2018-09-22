@@ -1,0 +1,12 @@
+
+#accordion-item{
+    width: 33%;
+    float: right;
+}
+
+.recent{
+    clear: right;
+    float: right;
+    width: 33%;
+
+}
