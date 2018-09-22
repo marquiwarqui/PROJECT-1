@@ -26,25 +26,26 @@
     </div>
     <div class="top-bar-right">
       <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
-        <li><button type="button" a class="button alert">Clear Search</button></li>
+        <li>
+          <input type="search" placeholder="Search">
+        </li>
+        <li>
+          <button id="search" type="button" class="button">Search</button>
+        </li>
+        <li>
+          <button type="button" a class="button alert">Clear Search</button>
+        </li>
       </ul>
     </div>
   </div>
 
-
-
   <!-- body -->
-
-
-
 
   <ul data-accordion>
     <li id="accordion-item" data-accordion-item>
       <a href="#" class="accordion-title">Accordion 1</a>
       <div class="accordion-content" data-tab-content>
-        <div>
+        <div id="youtube-player">
           <iframe width="154.8" height="94.5" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
@@ -52,7 +53,7 @@
   </ul>
 
 
-  <label class = "recent">
+  <label class="recent">
     <select multiple>
       <option value="showboat">Showboat</option>
       <option value="redwing">Redwing</option>
@@ -60,9 +61,6 @@
       <option value="hardball">Hardball</option>
     </select>
   </label>
-
-
-
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/what-input.js"></script>
