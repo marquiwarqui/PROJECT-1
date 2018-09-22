@@ -1,11 +1,11 @@
 
 var key = "AIzaSyBFAX9rkeEQwVNOs8N3SVcQc448zfrAQ0s";
+var youtubeSection = "#youtube-player";
 
-var search = "pakistan music";
+var search = "music";
+var videos = [];
+var currentVid = 0;
 
-// Your use of the YouTube API must comply with the Terms of Service:
-// https://developers.google.com/youtube/terms
-// Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
@@ -20,43 +20,55 @@ $(document).ready(function () {
         var query = $("#search").val().trim() + " music";
         // Use the JavaScript client library to create a search.list() API call.
         var request = gapi.client.youtube.search.list({
+            maxResults: 5,
             part: 'snippet',
-            q: query
+            q: query,
+            type: "video"
         });
         // Send the request to the API server, call the onSearchResponse function when the data is returned
         request.execute(onSearchResponse);
     });
 });
+
 // Triggered by this line: request.execute(onSearchResponse);
 function onSearchResponse(response) {
     console.log(response);
-    $("#youtube-player").empty();
     response.items.forEach(item => {
-        if(item.id.kind === "youtube#video"){
+        if (item.id.kind === "youtube#video") {
             console.log(item.id.videoId)
-            CreateYoutubePlayer(item.id.videoId);
+            videos.push(item.id.videoId)
         }
     });
+    CreateYoutubePlayer();
+}
 
-    /* var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML = responseString; */
+function nextVideo(){
+    if(currentVid + 1 >= videos.length){
+        currentVid = 0;
+    }else{
+        currentVid++;
+    }
+    CreateYoutubePlayer();
+}
+
+function prevVideo(){
+    if(currentVid - 1 < 0){
+        currentVid = videos.length - 1;
+    }else{
+        currentVid--;
+    }
+    CreateYoutubePlayer();
 }
 
 
-function CreateYoutubePlayer(videoId){
-   /*  <iframe id="ytplayer" type="text/html" width="640" height="360" 
-    src="https://www.youtube.com/embed?listType=search&list=pakistan+music+modern"
-      frameborder="0"></iframe> */
-      var youtubePlayer = $("<iframe>").attr("id","ytplayer");
-        youtubePlayer.attr("src", "https://www.youtube.com/embed/" + videoId);
-        youtubePlayer.attr("frameborder","0");
-        youtubePlayer.attr("type","text/html");
-        youtubePlayer.attr("width",400);
-        youtubePlayer.attr("hight",360);
+function CreateYoutubePlayer() {
+    $(youtubeSection).empty();
+    var youtubePlayer = $("<iframe>").attr("id", "ytplayer");
+    youtubePlayer.attr("src", "https://www.youtube.com/embed/" + videos[currentVid]);
+    youtubePlayer.attr("frameborder", "0");
+    youtubePlayer.attr("type", "text/html");
+    youtubePlayer.attr("width", 400);
+    youtubePlayer.attr("hight", 360);
 
-
-      $("#youtube-player").append(youtubePlayer);
-
-
-      //<iframe width="700" height="525" src="https://www.youtube.com/embed/humHxTNzSoY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    $(youtubeSection).append(youtubePlayer);
 }
