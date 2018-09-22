@@ -10,11 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <!-- <link rel="stylesheet" href="assets/css/app.css"> -->
-    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/app.css">
   </head>
   <body>
-      
+      <!-- header -->
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
@@ -27,10 +26,22 @@
         <ul class="menu">
           <li><input type="search" placeholder="Search"></li>
           <li><button type="button" class="button">Search</button></li>
+          <li><button type="button" a class="button alert">Clear Search</button></li>
         </ul>
       </div>
     </div>
 
+
+    
+      <!-- body -->
+      <div class="responsive-embed widescreen">
+        <iframe width="51.6" height="31.5" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+
+
+
+      <!-- footer -->
 
       <ul class="accordion" data-accordion>
         <li class="accordion-item is-active" data-accordion-item>
@@ -63,14 +74,7 @@
         </li>
       </ul>
 
-      <div class="callout" data-closable>
-        <button class="close-button" aria-label="Close alert" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <p>This is a close button example.</p>
-      </div>
-      
-      <div id="map"></div>
+     
 
       
 
@@ -78,20 +82,5 @@
     <script src="assets/js/vendor/what-input.js"></script>
     <script src="assets/js/vendor/foundation.js"></script>
     <script src="assets/js/app.js"></script>
-    <!-- <script src="project.js"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap" -->
-    <!-- async defer></script> -->
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap"
-    async defer></script>
-
   </body>
 </html>
