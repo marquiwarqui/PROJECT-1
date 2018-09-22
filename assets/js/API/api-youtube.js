@@ -2,7 +2,7 @@
 var key = "AIzaSyBFAX9rkeEQwVNOs8N3SVcQc448zfrAQ0s";
 var youtubeSection = "#youtube-player";
 
-var search = "music";
+var search = " music";
 var videos = [];
 var currentVid = 0;
 var hight = 94.5;
@@ -19,7 +19,7 @@ function onYouTubeApiLoad() {
 $(document).ready(function () {
     // Called when the search button is clicked in the html code
     $(".button").on("click", function () {
-        var query = $("#search").val().trim() + " music";
+        var query = $("#search").val().trim() + search;
         // Use the JavaScript client library to create a search.list() API call.
         var request = gapi.client.youtube.search.list({
             maxResults: 5,
@@ -64,6 +64,7 @@ function prevVideo(){
 
 
 function CreateYoutubePlayer() {
+    console.log(videos[currentVid])
     $(youtubeSection).empty();
     var youtubePlayer = $("<iframe>").attr("id", "ytplayer");
     youtubePlayer.attr("src", "https://www.youtube.com/embed/" + videos[currentVid]);
