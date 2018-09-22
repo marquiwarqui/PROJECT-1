@@ -5,6 +5,8 @@ var youtubeSection = "#youtube-player";
 var search = "music";
 var videos = [];
 var currentVid = 0;
+var hight = 94.5;
+var width = 154;
 
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
@@ -67,8 +69,8 @@ function CreateYoutubePlayer() {
     youtubePlayer.attr("src", "https://www.youtube.com/embed/" + videos[currentVid]);
     youtubePlayer.attr("frameborder", "0");
     youtubePlayer.attr("type", "text/html");
-    youtubePlayer.attr("width", 400);
-    youtubePlayer.attr("hight", 360);
+    youtubePlayer.attr("width", width);
+    youtubePlayer.attr("hight", hight);
 
     $(youtubeSection).append(youtubePlayer);
 }
