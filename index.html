@@ -2,13 +2,18 @@
 <html class="no-js" lang="en" dir="ltr">
 
 <head>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foundation for Sites</title>
   <link rel="stylesheet" href="assets/css/foundation.css">
+
+  <script src="assets/js/API/api-youtube.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
   <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/map.css">
 </head>
 
 <body>
@@ -23,27 +28,29 @@
     </div>
     <div class="top-bar-right">
       <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li><button type="button" class="button">Search</button></li>
-        <li><button type="button" a class="button alert">Clear Search</button></li>
+
+        <li>
+          <input type="search" placeholder="Search">
+        </li>
+        <li>
+          <button id="search" type="button" class="button">Search</button>
+        </li>
+        <li>
+          <button type="button" a class="button alert">Clear Search</button>
+        </li>
       </ul>
     </div>
   </div>
-
-
-
-  <!-- body -->
-
-
 
   <div class="small-3 columns">
   <ul data-accordion>
     <li id="accordion-item" data-accordion-item>
       <a href="#" class="accordion-title">Accordion 1</a>
       <div class="accordion-content" data-tab-content>
-        <div>
+        <div id="youtube-player">
           <iframe width="154.8" height="94.5" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
         </div>
+        <button id="previous-search" type="button" class="button">Previous Search</button> <button id="next-search" type="button" class="button">Next Search</button>
       </div>
     </li>
   </ul>
@@ -51,24 +58,33 @@
 
   <div class="small-3 columns">
   <label class = "recent">
+
     <select multiple>
       <option value="showboat">Showboat</option>
-      <option value="redwing">Redwing</option>
-      <option value="narcho">Narcho</option>
-      <option value="hardball">Hardball</option>
     </select>
   </label>
   </div>
 
-  
 
-  
-
+  <input id="pac-input" class="controls" type="text"
+  placeholder="Enter a location">
+<div id="map"></div>
+<div id="infowindow-content">
+<span id="place-name"  class="title"></span><br>
+Place ID <span id="place-id"></span><br>
+<span id="place-address"></span>
+</div>
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/what-input.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/app.js"></script>
+
+
+<script src="assets/js/maps/googleMaps.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap&libraries=places"
+async defer></script>
 </body>
 
 </html>

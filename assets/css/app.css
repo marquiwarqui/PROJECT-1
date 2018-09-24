@@ -1,6 +1,7 @@
 
 #accordion-item{
-    width: 33%;
+    list-style: none;
+    width: 33.3%;
     float: right;
 }
 
