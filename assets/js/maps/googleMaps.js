@@ -36,6 +36,7 @@ function initMap() {
     });
 
     autocomplete.addListener('place_changed', function() {
+      console.debug("Search Is Here!")
       infowindow.close();
       var place = autocomplete.getPlace();
       if (!place.geometry) {
@@ -65,6 +66,16 @@ function initMap() {
           place.formatted_address;
       infowindow.open(map, marker);
       console.log(place.name);
+
+      var location = Location;
+      location.lat = place.geometry.location.lat();
+      location.long = place.geometry.location.lng();
+      location.name = place.name;
+
+      console.log(location);
+      AddLocation(location);
+      CallYoutube();
+
     });
   }
 

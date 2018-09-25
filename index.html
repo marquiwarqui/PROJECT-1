@@ -10,6 +10,7 @@
   <title>Foundation for Sites</title>
   <link rel="stylesheet" href="assets/css/foundation.css">
 
+  <script src="./assets/js/actions.js"></script>
   <script src="assets/js/API/api-youtube.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
   <link rel="stylesheet" href="assets/css/app.css">
@@ -44,12 +45,13 @@
   </div>
 
   <div class="small-3 columns">
-  <ul data-accordion>
+  <ul data-accordion data-accordion data-allow-all-closed="true">
     <li id="accordion-item" data-accordion-item>
       <a href="#" class="accordion-title">Accordion 1</a>
       <div class="accordion-content" data-tab-content>
         <div id="youtube-player">
-          <iframe width="154.8" height="94.5" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+          <iframe width="232.2" height="141.75" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+          <button id="prsearch" type="button" class="button">Previous</button> <button id="nesearch" type="button" class="button">Next</button>
         </div>
       </div>
     </li>
@@ -61,9 +63,7 @@
 
     <select multiple>
       <option value="showboat">Showboat</option>
-      <option value="redwing">Redwing</option>
-      <option value="narcho">Narcho</option>
-      <option value="hardball">Hardball</option>
+      
     </select>
   </label>
   </div>
