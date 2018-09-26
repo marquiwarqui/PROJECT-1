@@ -1,16 +1,3 @@
- // Initialize Firebase
- var config = {
-  apiKey: "AIzaSyALSTGEwrPQvGDjfoyUQ5d-OUTASX6WW-c",
-  authDomain: "musical-maps-project.firebaseapp.com",
-  databaseURL: "https://musical-maps-project.firebaseio.com",
-  projectId: "musical-maps-project",
-  storageBucket: "musical-maps-project.appspot.com",
-  messagingSenderId: "933657167227"
-};
-firebase.initializeApp(config);
-
-var database = firebase.database();
-
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -74,7 +61,7 @@ function initMap() {
 
       console.log(location);
       AddLocation(location);
-      CallYoutube();
+      
 
     });
   }
