@@ -1,19 +1,19 @@
 //This is where we will tack the actions done and execute code
 var Location = {
     name: "",
-    lat:"",
-    long:"",
+    lat: "",
+    long: "",
     videoIds: []
 }
 
 var Locations = [];
 var currentLocation = 0;
 
-function GetSearch(searchPlace){
+function GetSearch(searchPlace) {
 
 }
 
-function AddLocation(location){
+function AddLocation(location) {
     var loc = {
         name: location.name,
         lat: location.lat,
@@ -22,7 +22,17 @@ function AddLocation(location){
     };
 
     Locations.push(loc);
-    currentLocation = Locations.length -1;
+    currentLocation = Locations.length - 1;
     console.log(currentLocation);
     console.log(Locations);
+
+
+    favorites(loc.name);    
+};
+
+var favorites = function (name) {
+    $(".list").append(
+        '<li class="list-group-item active id="favorites">' + name + '</li>');
+
+    console.log(name);
 }
