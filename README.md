@@ -5,7 +5,7 @@ Andres, Asim, Marco, and Roy
 Musical Maps: A website that plays local music depending on user selected region.
 
 Must uses at least two APIs
--Spotify
+-Youtube
 -Google Maps/Open Street Maps
 -
 
