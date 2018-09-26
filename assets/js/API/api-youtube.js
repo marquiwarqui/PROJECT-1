@@ -60,7 +60,7 @@ function onSearchResponse(response) {
     });
     
     CreateYoutubePlayer();
-
+    databasePush(Locations[currentLocation]);
     console.log(Locations);
 }
 

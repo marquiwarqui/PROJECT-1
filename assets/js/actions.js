@@ -13,7 +13,7 @@ function GetSearch(searchPlace) {
 
 }
 
-function AddLocation(location) {
+function AddLocation(location){
     var loc = {
         name: location.name,
         lat: location.lat,
@@ -26,7 +26,7 @@ function AddLocation(location) {
     console.log(currentLocation);
     console.log(Locations);
 
-
+    CallYoutube();
     favorites(loc.name);    
 };
 
@@ -34,5 +34,5 @@ var favorites = function (name) {
     $(".list").append(
         '<li class="list-group-item active id="favorites">' + name + '</li>');
 
-    console.log(name);
+    console.log(name);    
 }
