@@ -30,15 +30,19 @@ database.ref().on("child_added", function (childSnapshot) {
             doseExist = true;
         }
     }
-    if (doseExist === false){
-    //add to locations array//
-    var loc = {
-        name: childSnapshot.val().name,
-        lat: childSnapshot.val().lat,
-        long: childSnapshot.val().long,
-        videoIds: childSnapshot.val().videoIds.slice(0)
-    };
+    if (doseExist === false) {
+        //add to locations array//
+        var loc = {
+            name: childSnapshot.val().name,
+            lat: childSnapshot.val().lat,
+            long: childSnapshot.val().long,
+            videoIds: childSnapshot.val().videoIds.slice(0)
+        };
 
-    Locations.push(loc);
+        Locations.push(loc);
+        favorites(loc.name);
+
+        currentLocation = Locations.length-1;
+        CreateYoutubePlayer();
     }
 });
