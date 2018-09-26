@@ -14,6 +14,10 @@ function GetSearch(searchPlace){
 }
 
 function AddLocation(location){
+
+  
+
+
     var loc = {
         name: location.name,
         lat: location.lat,
@@ -25,4 +29,8 @@ function AddLocation(location){
     currentLocation = Locations.length -1;
     console.log(currentLocation);
     console.log(Locations);
+    CallYoutube();
+    
+    
+
 }
