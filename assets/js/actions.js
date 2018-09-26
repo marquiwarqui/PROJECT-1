@@ -13,7 +13,7 @@ function GetSearch(searchPlace) {
 
 }
 
-function AddLocation(location){
+function AddLocation(location) {
     var loc = {
         name: location.name,
         lat: location.lat,
@@ -27,12 +27,18 @@ function AddLocation(location){
     console.log(Locations);
 
     CallYoutube();
-    favorites(loc.name);    
+    favorites(loc.name);
 };
 
 var favorites = function (name) {
     $(".list").append(
         '<li class="list-group-item active id="favorites">' + name + '</li>');
 
-    console.log(name);    
+    console.log(name);
 }
+
+$(document).ready(function () {
+    
+    $("#prsearch").on("click", prevVideo);
+    $("#nesearch").on("click", nextVideo);
+});

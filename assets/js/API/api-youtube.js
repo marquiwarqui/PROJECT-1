@@ -18,23 +18,6 @@ function onYouTubeApiLoad() {
     gapi.client.setApiKey(key);
 }
 
-$(document).ready(function () {
-    // Called when the search button is clicked in the html code
-    $(".button").on("click", function () {
-        var query = $("#search").val().trim() + search;
-        console.log(query);
-        // Use the JavaScript client library to create a search.list() API call.
-        var request = gapi.client.youtube.search.list({
-            maxResults: maxResults,
-            part: 'snippet',
-            q: query,
-            type: "video"
-        });
-        // Send the request to the API server, call the onSearchResponse function when the data is returned
-        request.execute(onSearchResponse);
-    });
-});
-
 function CallYoutube(){
     var query = Locations[currentLocation].name + search;
         console.log(query);
@@ -65,7 +48,7 @@ function onSearchResponse(response) {
 }
 
 function nextVideo(){
-    if(currentVid + 1 >= videos.length){
+    if(currentVid + 1 >= Locations[currentLocation].videoIds.length){
         currentVid = 0;
     }else{
         currentVid++;
@@ -75,7 +58,7 @@ function nextVideo(){
 
 function prevVideo(){
     if(currentVid - 1 < 0){
-        currentVid = videos.length - 1;
+        currentVid = Locations[currentLocation].videoIds.length - 1;
     }else{
         currentVid--;
     }
