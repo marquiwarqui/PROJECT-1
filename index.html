@@ -44,39 +44,39 @@
     </div>
   </div>
 
+ 
+
   <div class="small-3 columns">
-  <ul data-accordion data-accordion data-allow-all-closed="true">
-    <li id="accordion-item" data-accordion-item>
-      <a href="#" class="accordion-title">Accordion 1</a>
-      <div class="accordion-content" data-tab-content>
-        <div id="youtube-player">
-          <iframe width="232.2" height="141.75" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+    <ul data-accordion data-accordion data-allow-all-closed="true">
+      <li id="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">Accordion 1</a>
+        <div class="accordion-content" data-tab-content>
+          <div id="youtube-player">
+            <iframe width="100%" height="150" src="https://www.youtube.com/embed/WUgvvPRH7Oc" frameborder="0" allowfullscreen></iframe>
+
+          </div>
           <button id="prsearch" type="button" class="button">Previous</button> <button id="nesearch" type="button" class="button">Next</button>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
   </div>
 
-  <div class="small-3 columns">
-  <label class = "recent">
+  <div class="list">
+    <label class="recent">
 
-    <select multiple>
-      <option value="showboat">Showboat</option>
-      
-    </select>
-  </label>
+      <ul class="list-group">
+      </ul>
+      </select>
+    </label>
   </div>
 
 
-  <input id="pac-input" class="controls" type="text"
-  placeholder="Enter a location">
-<div id="map"></div>
-<div id="infowindow-content">
-<span id="place-name"  class="title"></span><br>
-Place ID <span id="place-id"></span><br>
-<span id="place-address"></span>
-</div>
+  <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+  <div id="map"></div>
+  <div id="infowindow-content">
+    <span id="place-name" class="title"></span><br> Place ID <span id="place-id"></span><br>
+    <span id="place-address"></span>
+  </div>
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/what-input.js"></script>
@@ -85,10 +85,10 @@ Place ID <span id="place-id"></span><br>
   <script src="assets/js/database/database.js"></script>
 
 
-<script src="assets/js/maps/googleMaps.js"></script>
+  <script src="assets/js/maps/googleMaps.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap&libraries=places"
-async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ6KY6krJXFF_zK9kkFrax25bOijqGm40&callback=initMap&libraries=places"
+    async defer></script>
 </body>
 
 </html>

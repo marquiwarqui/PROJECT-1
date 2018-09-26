@@ -6,7 +6,7 @@ var search = " music";
 var videos = [];
 var currentVid = 0;
 var hight = 94.5;
-var width = 154;
+var width = 380;
 var maxResults = 5;
 
 
