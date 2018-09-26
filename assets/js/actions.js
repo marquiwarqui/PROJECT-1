@@ -32,7 +32,7 @@ function AddLocation(location) {
 
 var favorites = function (name) {
     $(".list").append(
-        '<li class="list-group-item active id="favorites">' + name + '</li>');
+        '<li class="list-group-item active" data-name = "'+ name + '">' + name + '</li>');
 
     console.log(name);
 }
@@ -42,3 +42,17 @@ $(document).ready(function () {
     $("#prsearch").on("click", prevVideo);
     $("#nesearch").on("click", nextVideo);
 });
+
+
+$(".list-group-item").on("click", function(){
+    var name = $(this).attr("data-name");
+    for (i = 0; i < Locations.length; i++) { 
+    
+        if(Locations[i].name === name){
+            currentLocation = i;
+        }
+
+    }
+    CreateYoutubePlayer();
+});
+
