@@ -30,11 +30,21 @@
     </div>
     <div class="top-bar-right">
       <ul class="menu">
+          <p><button class="button" data-open="exampleModal1">Instructions</button></p>
+
       </ul>
     </div>
   </div>
 
 
+  <div class="reveal" id="exampleModal1" data-reveal>
+    <h1>Instructions</h1>
+    <p class="lead"></p>
+    <p>Input a location on the map search bar and click the location to play music from that region.</p>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 
   <div class="small-3 columns">
     <ul data-accordion data-accordion data-allow-all-closed="true">
@@ -71,6 +81,8 @@
     <br>
     <span id="place-address"></span>
   </div>
+
+
 
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/what-input.js"></script>

@@ -12,6 +12,9 @@
     width: 33%;
 }
 
+.button{
+  padding-top: 30px;
+}
 
 .list-group {
     margin-bottom: 1rem;
